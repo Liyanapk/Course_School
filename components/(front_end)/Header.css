@@ -1,0 +1,26 @@
+.container-header{
+
+    max-width: auto;
+    max-height: auto;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    gap: 8em;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+.header-content li{
+    list-style: none;
+}
+.nav-item{
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
