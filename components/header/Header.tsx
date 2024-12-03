@@ -47,13 +47,15 @@ export default function Header () {
                     <li className="nav-item">
                         <a href="#">Blog</a> <IoIosArrowDown />
                     </li>
+                   
                 </ul>
             </div>
-            <div className="display-icon-toggle">
-                    <AiOutlineMenu className="display-icon" onClick={toggleSideBar} />
-                    </div>
+        
             <div>
                 <button className="header-button">Join Now</button>
+                <div className="display-icon-toggle">
+                    <AiOutlineMenu className="display-icon" onClick={toggleSideBar} />
+                    </div>
 
             </div>
             

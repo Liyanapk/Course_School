@@ -1,0 +1,61 @@
+.content-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+}
+.content-section-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+
+}
+.popular-button{
+    width: 170px;
+    height: 40px;
+    background-color: rgb(225, 225, 235);
+    color: blue;
+    border: 1px white;
+    border-radius: 50px;
+}
+
+.content-title{
+    font-size: 50px;
+   
+    font-weight: bolder;
+    letter-spacing: -2.5px;
+    max-width: 700px;
+    line-height: 1.06;
+    text-align: center;
+}
+.content-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+.popular-item-buttons{
+    position: relative;
+    background-color: white;
+    border: 1px white;
+    width: 150px;
+    height: 70px;
+    border-radius: 50px;
+    color: rgb(153, 150, 150);
+    font-size: 20px;
+
+}
+.popular-item-buttons:hover{
+    background-color: rgb(61, 32, 221);
+    color: white;
+}
+.badge {
+    position: absolute;
+    top: 2px;
+    right: 16px;
+    color: rgb(212, 211, 211);
+    font-size: 16px;
+    
+}

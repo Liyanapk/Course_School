@@ -1,9 +1,9 @@
 .banner-container{
     width: auto;
-    height: 800px;
+    height: 900px;
     background: 
-    linear-gradient(to bottom, #ffffff, #dac1dd), 
-    linear-gradient(to left, #b889b8, #656ea1);
+    linear-gradient(to bottom, #f4f4f7, #999fc5), 
+    linear-gradient(to right, #d0d3e0 ,#c27dc2e8);
   background-blend-mode: overlay;
       display: flex;
       flex-direction: column;
@@ -15,15 +15,39 @@
 
 
 .banner-box{
-    width: 250px;
-    height: 30px;
+    width: 280px;
+    height: 45px;
     border: 1px white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: white;
-    
-   
-    
+    position: relative; 
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #000; 
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px; 
 }
+
+.banner-box:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -19px;
+    left: -19px;
+    transform: translateY(-50%);
+    height: 45px;
+    width: calc(100% + 38px);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 29px rgba(209, 211, 237, 0.39);
+    z-index: -1; 
+    /* Polygon shape for decorative edges */
+    -webkit-clip-path: polygon(100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%, 0 0);
+    clip-path: polygon(100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%, 0 0);
+}
+
 .trophy-box{
     
     box-sizing: border-box;
@@ -33,7 +57,7 @@
 
 .banner-head{
     font-size: 90px;
-    font-weight: 600;
+    font-weight: bolder;
     letter-spacing: -2.5px;
     max-width: 950px;
     line-height: 1.06;
@@ -53,9 +77,108 @@
     align-items: center;
     flex-direction: row;
     gap: 2em;
+    transition: transform 0.3s ease;
+
+}
+.cards {
+  
+    transition: transform 0.3s ease; 
+  }
+
+.card-1{
+    background-color: rgba(235, 234, 188, 0.5);
+}
+.card-2{
+    background-color: rgba(243, 205, 239, 0.5);
+}
+.card-3{
+    background-color: rgba(248, 209, 233, 0.5);
+}
+
+
+.banner-toggle-arrow {
+    background-color: transparent; 
+    color: transparent; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease; 
+    opacity: 0; 
+}
+
+
+.banner-toggle-arrow:hover {
+    color: #4d4a4a;
+    opacity: 1; 
+    background-color: rgba(233, 226, 226, 0.699);
+    transform: translateX(10px); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1126px){
+
+    .banner-container{
+        width: auto;
+        height: 900px;
+
+    }
+
+    .banner-head{
+        font-size: 50px;
+        max-width: 1000px;
+    } 
+}
+
+@media screen and (max-width: 914px){
+
+    .banner-head{
+        max-width: 900px;
+
+    }
+    .banner-container{
+        width: auto;
+        overflow: hidden;
+    }
 
 }
 
-.card-1{
-    background-color: #d7b8db;
+
+
+
+
+@media screen and (max-width: 744px){
+
+    .banner-head{
+        max-width: 800px;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 770px){
+
+   
+
 }
