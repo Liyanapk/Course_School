@@ -1,0 +1,151 @@
+.instructor-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 900px;
+    margin-top: 6rem;
+    background-color: rgba(221, 239, 247, 0.11);
+}
+
+.instructor-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+   
+
+}
+.instructor-span{
+    color: rgb(235, 158, 170);
+    font-weight: 500;
+    font-size: 14px;
+    width: 150px;
+    height: 30px;
+    background-color: rgba(236, 163, 186, 0.212);
+    border-radius: 50px;
+    margin-top: 6rem;
+}
+.instructor-head{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+.instructor-para{
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    width: 900px;
+    text-align: center;
+    color: gray;
+}
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 2em; 
+    margin-top: 2rem;
+   
+}
+.instructor-card-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    gap: 0.2em;
+    opacity: 0; 
+    width: 0;
+    overflow: hidden; 
+    white-space: nowrap; 
+    transition: width 1s ease, opacity 0.5s ease-in-out;
+}
+
+.instructor-card-items{
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20em;
+    
+  
+    
+}
+.instructor-card{
+    position: relative;
+    overflow: hidden;
+    border: 1px white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.instructor-card:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    
+    
+}
+
+.instructor-card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+.instructor-card-content h1{
+    font-size: 35px;
+    color: white;
+    font-weight: bolder;
+    opacity: 0; 
+    width: 0;
+    overflow: hidden; 
+    white-space: nowrap; 
+    transition: width 1s ease, opacity 0.5s ease-in-out;
+    
+}
+.instructor-card-content p{
+    font-size: 12px;
+    color: white;
+    opacity: 0; 
+    width: 0; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    transition: width 1s ease, opacity 0.5s ease-in-out;
+}
+
+.instructor-card:hover .instructor-card-icons {
+    
+    opacity: 1;
+    width: 100%;
+    
+}
+
+.instructor-card:hover .instructor-card-content h1 {
+    opacity: 1; 
+    width: 100%;
+}
+
+.instructor-card:hover .instructor-card-content p {
+    opacity: 1; 
+    width: 100%;
+}
+
+.instructor-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 255, 0.925), rgba(255, 255, 255, 0.37)); 
+    opacity: 0;
+    z-index: 0; 
+    transition: opacity 0.3s;
+}
+.instructor-card:hover::before {
+    opacity: 1; 
+}
+
+

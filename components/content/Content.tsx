@@ -6,6 +6,8 @@ import { Tabs, Tab } from '@mui/material';
 import { CiBookmark } from "react-icons/ci";
 import { FiBook } from "react-icons/fi";
 import { MdOutlinePerson } from "react-icons/md";
+import { CiCircleMinus } from "react-icons/ci";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 
 type Category = 'Featured' | 'Popular' | 'Trending' | 'Latest';
@@ -172,7 +174,8 @@ export default function ContentSection() {
             },
           }}
         >
-          {['All Course', 'Featured', 'Popular', 'Trending', 'Latest'].map((category) => (
+          {[        
+          'All Course', 'Featured', 'Popular', 'Trending', 'Latest'].map((category) => (
             <Tab
               key={category}
               label={category}
@@ -187,11 +190,11 @@ export default function ContentSection() {
         <div className='content-cards'>
           {filteredCards().map((card) => (
             <div className='card' key={card.id}>
-              <div >
+              <div>
                 <img src={card.image} alt={card.title} className='card-image' />
                 
               </div>
-              <div>
+              <div className='card-content-item'>
                 <div className='bookmark'>
                     <div className="rating-container">
                        <img src={card.rating} alt="Rating" className="rating-img" />
@@ -207,13 +210,16 @@ export default function ContentSection() {
                     <MdOutlinePerson /><span>{card.lesson}</span>
                 </div>
                 <p className='para-1'>{card.paragraph1}</p>
-                <p className='para-2'>{card.paragraph2}</p>
+                <p className='para-2'><CiCircleMinus className='icon-container' />{card.paragraph2}</p>
 
-                <p className="pricing">
-                    <span className="new-price">{card.pricing}</span>
-                    <span className="original-price">{card.actualPrice}</span>
-                </p>
-                
+                <div className='card-end'>
+                    <p className="pricing">
+                       <span className="new-price">{card.pricing}</span>
+                       <span className="original-price">{card.actualPrice}</span>
+                    </p>
+                       <p className='content-learnmore'>Learn More  <IoIosArrowRoundForward /></p>
+                </div>
+
               </div>
             </div>
           ))}
