@@ -40,7 +40,7 @@
     position: relative;
     background-color: white;
     border: 1px white;
-    width: 150px;
+    width: 180px;
     height: 70px;
     border-radius: 50px;
     color: rgb(153, 150, 150);
@@ -48,7 +48,7 @@
 
 }
 .popular-item-buttons:hover{
-    background-color: rgb(61, 32, 221);
+    background-color: rgb(67, 110, 204);
     color: white;
 }
 .badge {
@@ -58,4 +58,134 @@
     color: rgb(212, 211, 211);
     font-size: 16px;
     
+}
+.content-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 5em;
+    width: 100%;
+    height: auto;
+  
+    
+   
+  }
+  
+  .card {
+    background-color: #fff;
+    
+   
+    
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+  .rating-img{
+    width: 100px;
+    height: 30px;
+    background-color: white;
+  }
+
+  .card-image{
+    width: 100%;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 5px;
+    object-fit: cover;
+    
+  }
+  .rating-container {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+  }
+  
+
+  
+  .review-count {
+    font-size: 14px; 
+    color: #555; 
+  }
+  .bookmark{
+    display: flex;
+    gap: 9em;
+    align-items: center;
+    color: black;
+    
+  }
+  .person-book{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    gap: 0.8em;
+    align-items: center;
+  }
+  .title{
+    font-size: 28px;
+    font-weight: 600;
+    width: 300px;
+  }
+  .para-1{
+    margin-top: 1rem;
+    color: rgb(153, 151, 151);
+    width: 300px;
+
+  }
+  .para-2{
+    margin-top: 0.2rem;
+    color: #363535;
+  }
+  .pricing{
+   margin-top: 1rem;
+   font-weight: bold;
+  }
+  .new-price{
+    font-size: 24px;
+    color: rgb(102, 101, 101); 
+    margin-right: 10px;
+
+  }
+
+  .original-price{
+  text-decoration: line-through;
+  color: #888; 
+  
+}
+
+
+
+
+@media (max-width: 1288px) {
+  .content-cards {
+    grid-template-columns: 1fr; 
+    gap: 2em; 
+  }
+
+  .card {
+    flex-direction: column; 
+    gap: 1em; 
+  }
+
+  .card-image {
+    width: 50px; 
+    height: 80px; 
+  }
+
+  .title {
+    width: 100%; 
+  }
+
+  .para-1,
+  .para-2 {
+    width: 100%;
+  }
+
+  .person-book {
+    flex-direction: column; 
+    gap: 0.5em; 
+  }
+
+  .pricing {
+    width: 100%; 
+  }
 }

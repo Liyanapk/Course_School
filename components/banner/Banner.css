@@ -85,15 +85,7 @@
     transition: transform 0.3s ease; 
   }
 
-.card-1{
-    background-color: rgba(235, 234, 188, 0.5);
-}
-.card-2{
-    background-color: rgba(243, 205, 239, 0.5);
-}
-.card-3{
-    background-color: rgba(248, 209, 233, 0.5);
-}
+
 
 
 .banner-toggle-arrow {
