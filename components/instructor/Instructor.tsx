@@ -14,7 +14,7 @@ export default function InstructorPage(){
         { name: 'Alejandro', subject : 'English Teacher', image:'/images/card/course-image-02.png'}
     ]
     return(
-        <div className='instructor-container'>
+        <div className='instructor-content'>
              <div className='instructor-head'>
                 <button className='instructor-span'>OUR INSTRUCTOR</button>
                 <h2 className='instructor-head'>Word Class Best Instructor</h2>

@@ -4,6 +4,7 @@ import Banner from "@/components/banner/Banner";
 import ContentSection from "@/components/content/Content";
 import InstructorPage from "@/components/instructor/Instructor";
 
+
 export default function CoursePage (){
 
 
@@ -15,6 +16,7 @@ export default function CoursePage (){
             <Banner/>
             <ContentSection/>
             <InstructorPage/>
+            
             <Footer/>
            
         </div>
