@@ -22,8 +22,8 @@ export default function Header () {
                 <Image
                 src="/images/logo/logo.png"
                 alt="logo"
-                width={150}
-                height={50}
+                width={152}
+                height={49}
                 />
             </div>
 

@@ -1,13 +1,19 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .instructor-content{
     display: flex;
     flex-direction: column;
     align-items: center;
-     height: 900px;
-     width: 100%;
+    height: auto;
+    padding-bottom: 4rem;
     margin: 0 auto;
-    background-color: rgba(221, 239, 247, 0.11);
-    
+    background-color: rgba(161, 216, 240, 0.11);
     margin-top: 4rem;
+    max-width: 100%;
+  
 }
 
 .instructor-head{
@@ -41,12 +47,16 @@
     width: 900px;
     text-align: center;
     color: gray;
+    width: 90%; 
+    max-width: 600px;
+    margin: 0 auto;
 }
 .card-grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: 2em; 
     margin-top: 2rem;
+    
    
 }
 .instructor-card-icons{
@@ -54,8 +64,8 @@
     flex-direction: row;
     align-items: center;
     color: white;
-    font-size: 15px;
-    gap: 0.2em;
+    font-size: 18px;
+    gap: 0.4em;
     opacity: 0; 
     width: 0;
     overflow: hidden; 
@@ -162,9 +172,9 @@
         margin-top: 4rem;
     }
     .instructor-content{
-         height: auto;
+         
          padding-bottom: 4rem;
-         width: auto;
+         width: 100%;
     }
     
 
@@ -208,54 +218,48 @@
     .card-grid{
         grid-template-columns: repeat(1, 1fr); 
     }
-    .instructor-head{
-        font-size: 35px;
-        width: 500px;
-        
-    }
-    .instructor-para{
    
-        width: 600px;
+        .instructor-head {
+            font-size: 35px;
+            width: 100%; /* Change to responsive width */
+        }
+        .instructor-para {
+            width: 90%; /* Adjust width */
+        }
     }
     
-}
-@media (max-width: 506px){
-    
-    .instructor-content{
-        width: 125%;
-   }
-    
-}
+
+
 @media (max-width: 574px){
     
     .instructor-head{
         width: 400px;
     }
     .instructor-para{
-        width: 500px;
+        width: 400px;
+        text-align: center;
     }
+    
+}
+
+@media (max-width: 506px){
+    
+    .instructor-content{
+        width: 100%;
+   }
     
 }
 @media (max-width: 492px){
     
     .instructor-head{
         width: 300px;
+        font-size: 30px;
     }
     .instructor-para{
-        width: 400px;
+        width: 300px;
+        font-size: 10px;
+        text-align: center;
     }
     
 }
 
-@media (max-width: 432px){
-    
-    .instructor-head{
-        font-size: 35px;
-
-    }
-    .instructor-para{
-        font-size: 12px;
-    }
-    
-
-}
