@@ -17,22 +17,22 @@ export default function Banner (){
         {
             title: 'React',
             description: 'Spken english dolor sit, amet consectetur.',
-            image: '/images/card/card1.jpg'
+            image: '/images/card/banner-card.webp'
         },
         {
             title:'English',
             description:'Spken english dolor sit, amet consectetur.',
-            image:'/images/card/card1.jpg'
+            image:'/images/card/banner-card.webp'
         },
         {
             title:'Education',
             description:'Eearning edu dolor sit, amet consectetur.',
-            image:'/images/card/card1.jpg'
+            image:'/images/card/banner-card.webp'
         },
         {
             title:'Education',
             description:'Lorem ipsum dolor sit, amet consectetur.',
-            image:'/images/card/card1.jpg'
+            image:'/images/card/banner-card.webp'
         }
         
     ];

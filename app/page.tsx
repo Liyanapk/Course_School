@@ -6,6 +6,7 @@ import InstructorPage from "@/components/instructor/Instructor";
 import FeedBack from "@/components/feedback/FeedBack"
 import SendEmail from "@/components/email/Email"
 
+
 export default function CoursePage (){
 
 

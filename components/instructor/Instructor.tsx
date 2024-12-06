@@ -2,16 +2,17 @@ import './Instructor.css'
 import { FaFacebookF } from "react-icons/fa6";
 import { TiSocialLinkedin } from "react-icons/ti";
 import { TiSocialTwitter } from "react-icons/ti";
+import Image from 'next/image';
 
 
 export default function InstructorPage(){
 
 
     const cardData = [
-        { name: 'Irma J. Erwin ' , subject:'English Teacher', image:'/images/card/course-image-02.png'},
-        { name: 'John Due' , subject : 'English Teacher', image:'/images/card/course-image-02.png' },
-        { name: 'Joo Bieden', subject : 'English Teacher', image:'/images/card/course-image-02.png' },
-        { name: 'Alejandro', subject : 'English Teacher', image:'/images/card/course-image-02.png'}
+        { name: 'Irma J. Erwin ' , subject:'English Teacher', image:'/images/card/card.webp'},
+        { name: 'John Due' , subject : 'English Teacher', image:'/images/card/card.webp' },
+        { name: 'Joo Bieden', subject : 'English Teacher', image:'/images/card/card.webp' },
+        { name: 'Alejandro', subject : 'English Teacher', image:'/images/card/card.webp'}
     ]
     return(
         <div className='instructor-content'>
@@ -23,7 +24,12 @@ export default function InstructorPage(){
              <div className='card-grid'>
               {cardData.map((card)=>(
                 <div className='instructor-card' key={card.name}>
-                    <img src={card.image} alt={card.name} />
+                    <Image
+                     src={card.image} 
+                     alt={card.name} 
+                     width={300}
+                     height={500}
+                     />
                      <div className='instructor-card-items'>
                         <div className='instructor-card-icons'>
                             <FaFacebookF />

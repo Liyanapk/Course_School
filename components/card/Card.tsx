@@ -2,6 +2,7 @@
 import React from 'react'
 import './Card.css'
 import { PiArrowRightThin } from "react-icons/pi";
+import Image from 'next/image';
 
 
 interface cardProps {
@@ -21,7 +22,12 @@ const Card: React.FC<cardProps> =({ title, description, image })=> {
                 <p className='card-description'>{description}</p>
                 <p className='card-learnmore'>Learn More  <PiArrowRightThin  className='card-arrow'/></p>
             </div>
-            <img src={image} alt={title} className='card-image-container' /> 
+            <Image
+             src={image} 
+             alt={title} 
+             width={280} 
+             height={233} 
+             className='card-image-container' /> 
 
         </div>
     )

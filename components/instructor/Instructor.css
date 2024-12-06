@@ -55,7 +55,7 @@ html, body {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: 2em; 
-    margin-top: 2rem;
+    margin-top: 4rem;
     
    
 }
@@ -79,9 +79,7 @@ html, body {
     left: 10%;
     display: flex;
     flex-direction: column;
-    gap: 20em;
-    
-  
+    gap: 16em;
     
 }
 .instructor-card{
@@ -91,6 +89,7 @@ html, body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
 
 }
 
@@ -169,15 +168,25 @@ html, body {
         
         grid-template-columns: repeat(2, 1fr); 
         gap: 4em; 
-        margin-top: 4rem;
+        margin-top: 4rem ;
     }
     .instructor-content{
          
          padding-bottom: 4rem;
          width: 100%;
     }
-    
+   
 
+}
+
+@media(max-width:949px){
+    .card-grid{
+        gap: 1em; 
+    }
+    .instructor-card{
+        margin: 0px 30px 0px 30px;
+    }
+    
 }
 
 @media (max-width: 894px){
@@ -260,6 +269,31 @@ html, body {
         font-size: 10px;
         text-align: center;
     }
-    
+
+   
 }
 
+@media (max-width:477px){
+    .instructor-card{
+        margin: 0px 50px 0px 50px;
+    }
+}
+@media (max-width:433px){
+    .instructor-card{
+        margin: 0px 10px 5px 10px;
+    }
+}
+@media (max-width:349px){
+    .instructor-card{
+        margin: 0px 10px 5px 10px;
+    }
+    .instructor-card-items{
+        position: absolute;
+        top: 5%;
+        left: 10%;
+        display: flex;
+        flex-direction: column;
+        gap: 16em;
+        
+    }
+}

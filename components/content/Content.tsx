@@ -8,7 +8,7 @@ import { FiBook } from "react-icons/fi";
 import { MdOutlinePerson } from "react-icons/md";
 import { CiCircleMinus } from "react-icons/ci";
 import { IoIosArrowRoundForward } from "react-icons/io";
-
+import Image from 'next/image';
 
 type Category = 'Featured' | 'Popular' | 'Trending' | 'Latest';
 
@@ -191,7 +191,12 @@ export default function ContentSection() {
           {filteredCards().map((card) => (
             <div className='card' key={card.id}>
               <div>
-                <img src={card.image} alt={card.title} className='card-image' />
+                <Image
+                 src={card.image} 
+                 alt={card.title} 
+                 width={231}
+                 height={324}
+                 className='card-image' />
                 
               </div>
               <div className='card-content-item'>
