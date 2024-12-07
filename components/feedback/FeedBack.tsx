@@ -70,10 +70,11 @@ export default function FeedBack() {
 
   var settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 100,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
   };
 
 
@@ -107,10 +108,10 @@ export default function FeedBack() {
 
 
           <div>
-          <Slider {...settings}>
+          
           <div className="slider-all" >
             
-          
+          <Slider {...settings}>
             {cards.map((card) => (
               <div className='feedback-card'>
 
@@ -149,9 +150,9 @@ export default function FeedBack() {
                   </div>
               </div>
             ))}
-           
+            </Slider>
           </div>
-          </Slider>
+         
          </div>
           </div>
         </div>

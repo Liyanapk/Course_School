@@ -183,7 +183,7 @@
 
 
 
-@media (max-width: 1310px) {
+/* @media (max-width: 1310px) {
 
   .content-cards {
    
@@ -240,10 +240,10 @@
   gap: 5em;
 }
 
-}
+} */
 
 
-@media (max-width: 1020px) {
+@media (max-width: 1310px) {
  
   .content-cards {
     width: 800px;

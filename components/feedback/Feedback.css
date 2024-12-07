@@ -28,7 +28,7 @@
 
 .feedback-button{
     border: 1px white;
-    width: 700px;
+    width: 650px;
     height: 50px;
     border-radius: 5px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
@@ -46,7 +46,7 @@
 .feedback-description{
     display: flex;
     flex-direction: column;
-    width: 700px;
+    width: 650px;
     height: 100px;
     background-color: rgba(255, 255, 255, 0.425);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
@@ -68,6 +68,7 @@
 .feedback-card{ 
     display: flex;
     flex-direction: row;
+    padding: 0px 10px;
 }
 .feedback-row{
     display: flex;
@@ -136,3 +137,71 @@
 }
 
 
+@media(max-width:1359px){
+    .feedback-row{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+}
+@media(max-width:736px){
+    .feedback-button{
+        width: 500px;
+    }
+    .feedback-description{
+        width: 500px;
+    }
+    .slider-all{
+        width: 500px;
+        height: 400px;
+    }
+
+}
+@media(max-width:522px){
+    .feedback-button{
+        width: 400px;
+    
+    }
+    .feedback-description{
+        width: 400px;
+        height: 130px;
+    }
+    .slider-all{
+    
+        width: 400px;
+        padding: 0px 10px;
+    }
+    
+    .feedback-heading{
+        font-size: 45px;
+        font-weight: bolder;
+    }
+    
+
+}
+@media(max-width:417px){
+    .feedback-button{
+        width: 350px;
+    
+    }
+    .feedback-description{
+        width: 350px;
+    }
+    .slider-all{
+       
+        width: 350px;
+        height: 450px;
+        padding: 0px 10px;
+    }
+    .feedback-para{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .feedback-heading{
+        font-size: 40px;
+        font-weight: bolder;
+    }
+
+}

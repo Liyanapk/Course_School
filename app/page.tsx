@@ -5,7 +5,8 @@ import ContentSection from "@/components/content/Content";
 import InstructorPage from "@/components/instructor/Instructor";
 import FeedBack from "@/components/feedback/FeedBack"
 import SendEmail from "@/components/email/Email"
-
+import BlogPost from "@/components/post/BlogPost";
+import Event from "@/components/events/Event";
 
 export default function CoursePage (){
 
@@ -19,7 +20,9 @@ export default function CoursePage (){
             <ContentSection/>
             <InstructorPage/>
             <FeedBack />
-             <SendEmail/>
+            <Event/>
+            <BlogPost/>
+            <SendEmail/>
             <Footer/>
            
         </div>
