@@ -1,16 +1,51 @@
-'use client';
 
+'use client'
 import './Banner.css'
-import Card from '../card/Card'
+
+
+import Image from 'next/image';
 import { PiArrowRightThin } from "react-icons/pi";
-import { PiArrowLeftThin } from "react-icons/pi";
-import { useState } from 'react';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 
 export default function Banner (){
 
-    const [position, setPosition] = useState(0)
-    
+   
+    const settings = {
+        dots: false,
+        infinite: false,
+        speed: 100,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+              breakpoint: 1310,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+      };
 
 
     const cards = [
@@ -36,57 +71,49 @@ export default function Banner (){
         }
         
     ];
-
-    const visibleCard = cards.slice(position, position+3 )
-    
-
-
-    const moveRight = ()=> {
-        if(position > 0 ){
-            setPosition(position - 1)
-        }
-    }
-
-
-    const moveLeft = ()=> {
-        if(position + 3 < cards.length){
-            setPosition(position + 1)
-        }
-    }
+  
 
     return(
         <div className="banner-container">
-            <div className="trophy-box">
-                <p className="banner-box"> 🏆 The Leader in Online Learning</p>
-            </div>
-            <h1 className='banner-head'>We teaching, educate and<span className='banner-text-color'>build the future</span>of online learning </h1>
-             
-             <div  className='banner-card'>
-             <PiArrowLeftThin className='banner-toggle-arrow' onClick={moveLeft}/> 
-                
-             
-            {visibleCard.map((card,index)=>(
-                <div key={index} className={`cards - ${index+1}`}  >
-                    <Card 
-                        title={card.title}
-                        description={card.description}
-                        image={card.image}
-                    />
-
+            <div className='banner-title'>
+                <div className="trophy-box">
+                    <p className="banner-box"> 🏆 The Leader in Online Learning</p>
                 </div>
-            ))}   
-                <PiArrowRightThin className='banner-toggle-arrow' onClick={moveRight} />
-             </div>
-
-
-
+                 <h1 className='banner-head'>We teaching, educate and<span className='banner-text-color'>build the future</span>of online learning </h1>
+            </div>
+       
+            
            
-
-
+          <div>
+          
+          <div className="banner-slider-all">
+            <Slider {...settings}>
+  {cards.map((card) => (
+    <div className="banner-card" key={card.title}>
+        <div className="banner-card-row">
+             <div className="banner-card-head">
+                <h1>{card.title}</h1>
+                <h2>{card.description}</h2>
+                <p  className='banner-arrow'>Learn More  <PiArrowRightThin /> </p>
+            </div>
+            <div className="banner-image-div">
+             <Image
+             src={card.image}
+             alt="image"
+             width={280} 
+             height={233} 
+             className="banner-image"
+             />
+            </div>
+        </div>
+    </div>
+  ))}
+  </Slider>
+</div>
 
              
-        
         </div>
+    </div>
 
     )
 }
@@ -96,21 +123,3 @@ export default function Banner (){
 
 
 
-
-
-{/* <div  className='banner-card2'>
-<PiArrowLeftThin  onClick={moveLeft}/> 
-   
-
-       {visibleCardTwo.map((card,index)=>(
-<div key={index} className={`cards - ${index+1}`} >
-   <Card 
-       title={card.title}
-       description={card.description}
-       image={card.image}
-   />
-
-</div>
-))}
-   <PiArrowRightThin onClick={moveRight} />
-</div> */}

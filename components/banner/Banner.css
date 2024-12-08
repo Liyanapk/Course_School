@@ -1,21 +1,21 @@
 .banner-container{
     width: auto;
-    height: 900px;
+    height: auto;
+    padding: 8rem 0;
     background: 
     linear-gradient(to bottom, #f4f4f7, #999fc5), 
     linear-gradient(to right, #add8e6 ,#db91c9e8);
     background-blend-mode: overlay;
+}
+.banner-title{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2em;
-   
-  
+    gap: 1em;
 }
 
-
 .banner-box{
-    width: 280px;
+    width: 300px;
     height: 45px;
     border: 1px white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -51,7 +51,7 @@
 .trophy-box{
     
     box-sizing: border-box;
-    margin-top: 8rem;
+    
 
 }
 
@@ -71,106 +71,132 @@
     color: transparent; 
   }
 
-.banner-card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 2em;
-    transition: transform 0.3s ease;
-
-}
-.cards {
   
-    transition: transform 0.3s ease; 
+
+  .banner-slider-all {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Responsive columns */
+    gap: 1em;
+    justify-content: center;
+    align-items: center; 
+    width: 72%;
+    margin: 0 auto; 
+    padding: 4em 0;
   }
+  
+  
+  
+  .banner-card {
+    min-width: 430px; 
+    max-width: 300px; 
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
 
-
-
-
-.banner-toggle-arrow {
-    background-color: transparent; 
-    color: transparent; 
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.3s ease, color 0.3s ease, opacity 0.3s ease; 
-    opacity: 0; 
-}
-
-
-.banner-toggle-arrow:hover {
-    color: #4d4a4a;
-    opacity: 1; 
-    background-color: rgba(233, 226, 226, 0.699);
-    transform: translateX(10px); 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1126px){
-
-    .banner-container{
-        width: auto;
-        height: 900px;
-
-    }
-
-    .banner-head{
-        font-size: 50px;
-        max-width: 1000px;
-    } 
-}
-
-@media screen and (max-width: 914px){
-
-    .banner-head{
-        max-width: 900px;
-
-    }
-    .banner-container{
-        width: auto;
-        overflow: hidden;
-    }
-
-}
-
-
-
-
-
-@media screen and (max-width: 744px){
-
-    .banner-head{
-        max-width: 800px;
-    }
-
-
-}
-
-
-
-@media screen and (max-width: 770px){
-
+    
+  }
+  .banner-card-row {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 1rem; 
+  }
+  .banner-card-head{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  .banner-card-head h1{
+    font-size: 30px;
+    font-weight: 700;
    
+  }
+  .banner-card-head h2{
+    font-size: 18px;
+    font-weight: 400;
+  }
+ 
+  .banner-arrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: gray;
+  }
+ 
+  
+  
+  
 
+
+
+@media(max-width:1830px){
+    .banner-card {
+        min-width: 350px; 
+        max-width: 250px; 
+        background: #fff;
+        border-radius: 8px;
+        padding: 1rem;
+    
+        
+      }
+
+}
+
+@media(max-width:1550px){
+    .banner-card {
+        min-width: 300px; 
+        padding: 2rem;
+      }
+      .banner-card-head h1{
+        font-size: 20px;
+        font-weight: 700;
+       
+      }
+      .banner-card-head h2{
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+}
+
+@media (max-width: 1354px) {
+    .banner-card-row {
+        flex-direction: column-reverse; /* Reverse the order: image goes to the bottom */
+        align-items: center; /* Center the items */
+        gap: 1rem; /* Add spacing between the content and the image */
+    }
+
+    .banner-image-div {
+        margin-top: 1rem; /* Add space between the content and the image */
+    }
+
+    .banner-card-head {
+        text-align: start; /* Center-align the text */
+    }
+}
+
+
+
+@media(max-width:990px){
+
+    .banner-head{
+        font-size: 70px;
+        max-width: 900px;
+    }
+}
+
+@media(max-width:734px){
+
+    .banner-head{
+        font-size: 60px;
+        max-width: 700px;
+    }
+}
+
+@media(max-width:598px){
+
+    .banner-head{
+        font-size: 40px;
+        max-width: 500px;
+    }
 }

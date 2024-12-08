@@ -2,7 +2,7 @@ import './Event.css'
 import Image from 'next/image'
 import { CiLocationOn } from "react-icons/ci";
 import { CiClock2 } from "react-icons/ci";
-
+import { PiArrowRightThin } from "react-icons/pi";
 
 
 
@@ -36,7 +36,7 @@ export default function Event(){
                 <div className='event-card-items'>
                     <p><CiLocationOn />{card.place}   <CiClock2 />{card.time}</p>
                     <h1>{card.title}</h1>
-                    <button>{card.button}</button>
+                    <button className='event-arrow'>{card.button} <PiArrowRightThin /></button>
 
                 </div>
 
