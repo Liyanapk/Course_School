@@ -2,6 +2,7 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import Banner from "@/components/banner/Banner";
 import ContentSection from "@/components/content/Content";
+import Catagory from "@/components/catagory/Catagory";
 import InstructorPage from "@/components/instructor/Instructor";
 import FeedBack from "@/components/feedback/FeedBack"
 import SendEmail from "@/components/email/Email"
@@ -18,6 +19,7 @@ export default function CoursePage (){
             <Header/>
             <Banner/>
             <ContentSection/>
+            <Catagory/>
             <InstructorPage/>
             <FeedBack />
             <Event/>
