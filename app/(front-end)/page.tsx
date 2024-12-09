@@ -9,6 +9,7 @@ import BlogPost from "@/components/post/BlogPost";
 import Event from "@/components/events/Event";
 import dynamic from "next/dynamic";
 const Banner = dynamic(()=> import("@/components/banner/Banner"))
+import DashboardMetrics from "@/components/dashboard/DashbordContent";
 
 export default function HomePage () { 
 
@@ -23,6 +24,7 @@ export default function HomePage () {
             <Event/>
             <BlogPost/>
             <SendEmail/>
+            <DashboardMetrics />
         </>
     )
 }
